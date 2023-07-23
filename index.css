@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-family: Gotham Rounded, sans-serif;
+    font-weight: normal;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #e7eaec, #0d0e0e);
+}
+
+.header {
+    color: #eaf4ee;
+    padding: 20px;
+    text-align: center;
+}
+
+
+/* CSS for the website name */
+
+.website-name {
+    /* font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    transition: transform 0.1sec ease-in-out; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    font-size: 50px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bolder;
+    font-style: oblique;
+}
+
+.website-name:hover {
+    transform: scale(1.2);
+}
+
+.calculator-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator-grid>button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+button {
+    transition: transform 0.3s ease-in;
+    box-shadow: 10px 10px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    / font-size: 16px;
+    border: none;
+    color: #fff;
+    /* background-color: #c10f3e;  */
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+button::before {
+    content: ".";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #45606e, #5a3c3c);
+    /* Adjust gradient colors */
+    z-index: -1;
+    border-radius: inherit;
+}
+
+button:hover {
+    transform: scale(1.1);
+    top: 3px;
+    right: 3px;
+}
+
+.calculator-grid>button:hover {
+    background-color: rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    word-wrap: break-word;
+    word-break: break-all;
+    transition: transform 0.3s ease-in;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    /
+    /* font-size:16px; */
+    border: none;
+    color: #fff;
+    background-color: #0c0c0c;
+    border-radius: 6px;
+    /* cursor: pointer; */
+    position: relative;
+    overflow: hidden;
+}
+
+.output:hover {
+    transform: scale(1.01);
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
+}
